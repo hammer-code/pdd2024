@@ -15,6 +15,10 @@ const config: Config = {
         white: "#FFFFFF",
         darkGray: "#333333",
         mediumGray: "#F5F5F5",
+        primaryBlack: {
+          800: "#131B24",
+          900: "#06090C",
+        },
       },
     },
   },
