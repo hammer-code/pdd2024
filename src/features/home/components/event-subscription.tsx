@@ -4,8 +4,8 @@ const EventSubscription = () => {
   return (
     <div className="mb-12 flex flex-col md:flex-row justify-between items-start">
       <div className="mb-8 md:mb-0 md:w-1/2">
-        <p className="text-lg mb-4 text-blue-200 font-semibold">What to expect:</p>
-        <ul className="list-none space-y-2 text-blue-100">
+        <p className="text-lg md:mb-4 mb-2 text-blue-200 font-semibold">What to expect:</p>
+        <ul className="md:text-base text-sm list-none space-y-2 text-blue-100">
           <li>🎤 Inspiring keynote speakers</li>
           <li>💡 Cutting-edge AI demonstrations</li>
           <li>🤝 Networking opportunities</li>
