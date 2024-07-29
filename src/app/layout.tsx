@@ -16,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/ic_pdd24_light.svg" sizes="any" />
+      </head>
       <body className={sora.className}>
         <div className="bg-gradient-to-b from-primaryBlack-800 to-primaryBlack-900 text-white min-h-screen flex items-center justify-center p-4">
           <div className="w-full max-w-6xl">{children}</div>
