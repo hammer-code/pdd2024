@@ -19,8 +19,8 @@ const HeroTitle = () => {
       </div>
 
       <div className="flex items-center md:gap-8 gap-4">
-        <Image src={hmcLogo} alt="hmc-logo" width={42} height={42} />
-        <Image src={pddLogo} alt="pdd-2024-logo" width={42} height={42} />
+        <Image src={hmcLogo} alt="hmc-logo" width={42} height={42} className="md:w-14 md:h-14" />
+        <Image src={pddLogo} alt="pdd-2024-logo" width={42} height={42} className="md:w-14 md:h-14" />
       </div>
     </div>
   );
