@@ -1,6 +1,37 @@
-import React from "react";
+"use client";
+
+import { useState } from "react";
+import axios from "axios";
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const EventSubscription = () => {
+  const [email, setEmail] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
+
+  const handleSubscription = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const res = await axios.post(`${BASE_URL}/newsletters/subscribe`, {
+        email: email,
+      });
+
+      // this action clears the input value and is triggered when the email is sent successfully
+      setIsSuccess(true);
+      setTimeout(() => {
+        setIsSuccess(false);
+        setEmail("");
+      }, 2500);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="mb-12 flex flex-col md:flex-row justify-between items-start">
       <div className="mb-8 md:mb-0 md:w-1/2">
@@ -12,20 +43,24 @@ const EventSubscription = () => {
           <li>🚀 Insights into the future of IT</li>
         </ul>
       </div>
-      <form className="md:w-1/2">
+      <form className="md:w-1/2" onSubmit={handleSubscription}>
         <p className="text-lg mb-4 text-blue-200 font-semibold">Stay updated:</p>
         <div className="flex items-center">
           <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="appearance-none bg-blue-800 bg-opacity-50 rounded-l-lg w-full text-white p-3 leading-tight focus:outline-none focus:bg-opacity-75 transition-all duration-200"
             type="email"
             placeholder="Enter your email"
             aria-label="Email address"
           />
           <button
-            className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 active:bg-blue-500 text-sm text-white py-3 px-4 rounded-r-lg transition duration-300"
-            type="button"
+            disabled={isLoading || isSuccess}
+            className={`${isLoading || isSuccess ? "cursor-not-allowed" : "cursor-pointer"}  ${
+              isSuccess ? "bg-sky-600" : "bg-blue-600 hover:bg-blue-700 active:bg-blue-500"
+            } flex-shrink-0 text-sm text-white py-3 px-4 rounded-r-lg transition duration-300`}
           >
-            Notify Me
+            {isLoading ? "Loading..." : isSuccess ? "Email Sent!" : "Notify Me"}
           </button>
         </div>
       </form>
