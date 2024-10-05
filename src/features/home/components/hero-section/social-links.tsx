@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const SocialLinks = () => {
   return (
-    <div className="text-center">
+    <div className="text-center my-8">
       <p className="text-sm text-blue-200 mb-4">Organized by Hammercode</p>
       <div className="flex justify-center space-x-4">
         <Link href="https://www.instagram.com/hmrcode" className="text-blue-300 hover:text-blue-100 transition-colors">

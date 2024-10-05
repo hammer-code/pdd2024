@@ -1,12 +1,19 @@
+import { speakerLists } from "@/constants";
 import Card from "./card";
 import TitleSection from "./title-section";
 
 const Speakers = () => {
   return (
-    <div className="max-w-6xl mx-auto px-5 py-10">
+    <div className="max-w-6xl mx-auto px-5 py-24">
       <div className="space-y-6">
         <TitleSection />
-        <Card />
+        <div className="w-full flex lg:flex-row flex-col items-center justify-center gap-8">
+          {
+            speakerLists.map(item => (
+              <Card data={item} />
+            ))
+          }
+        </div>
       </div>
     </div>
   );
