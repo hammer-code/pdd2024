@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.gradient-bg {
-  background: linear-gradient(135deg, #181819 0%, #1f1f1f 100%);
+body {
+  background-color: #06090c;
+  color: #ffffff;
 }
 
 .gradient-text {
@@ -14,11 +15,9 @@
   text-fill-color: transparent;
 }
 
-
 .glass-effect {
-  background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(20, 25, 85, 0.2);
-  backdrop-filter: blur(8px);
+  /* backdrop-filter: blur(8px); */
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }

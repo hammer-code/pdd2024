@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/common/navbar";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -20,8 +21,9 @@ export default function RootLayout({
         <link rel="icon" href="/ic_pdd24_light.svg" sizes="any" />
       </head>
       <body className={sora.className}>
-        <div className="bg-gradient-to-b from-primaryBlack-800 to-primaryBlack-900 text-white min-h-screen flex items-center justify-center p-4">
-          <div className="w-full max-w-6xl">{children}</div>
+        <Navbar />
+        <div className="bg-primaryBlack-900 mt-28 text-white">
+          {children}
         </div>
       </body>
     </html>

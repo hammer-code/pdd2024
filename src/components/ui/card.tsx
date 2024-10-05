@@ -3,7 +3,11 @@ type CardProps = {
 };
 
 const Card = ({ children }: CardProps) => {
-  return <div className="glass-effect p-8 md:p-12 rounded-xl">{children}</div>;
+  return (
+    <div className="max-w-6xl mx-auto px-5 py-10">
+      {children}
+    </div>
+  )
 };
 
 export default Card;
