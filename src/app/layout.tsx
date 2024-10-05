@@ -1,19 +1,21 @@
-import type { Metadata } from "next";
-import { Sora } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/common/navbar";
+import type { Metadata } from 'next'
+import { Sora } from 'next/font/google'
+import './globals.css'
+import Navbar from '@/components/common/navbar'
+import { ShootingStars } from '@/components/ui/shooting-stars'
+import { StarsBackground } from '@/components/ui/stars-background'
 
-const sora = Sora({ subsets: ["latin"] });
+const sora = Sora({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: " Coming Soon - PDD24",
-  description: "PDD2024 by HammerCode",
-};
+  title: ' Coming Soon - PDD24',
+  description: 'PDD2024 by HammerCode',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
@@ -22,10 +24,12 @@ export default function RootLayout({
       </head>
       <body className={sora.className}>
         <Navbar />
-        <div className="bg-primaryBlack-900 mt-28 text-white">
-          {children}
+        <div className='relative'>
+          <div className="mt-28 text-white relative z-10">{children}</div>
+          <ShootingStars />
+          <StarsBackground />
         </div>
       </body>
     </html>
-  );
+  )
 }
