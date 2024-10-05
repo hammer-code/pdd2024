@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Sora } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/common/navbar'
+import Sidebar from '@/components/common/sidebar'
 import { ShootingStars } from '@/components/ui/shooting-stars'
 import { StarsBackground } from '@/components/ui/stars-background'
 
@@ -24,8 +25,9 @@ export default function RootLayout({
       </head>
       <body className={sora.className}>
         <Navbar />
+        <Sidebar />
         <div className='relative'>
-          <div className="mt-28 text-white relative z-10">{children}</div>
+          <div className="mt-14 md:mt-28 text-white relative z-10">{children}</div>
           <ShootingStars />
           <StarsBackground />
         </div>
