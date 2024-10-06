@@ -10,7 +10,7 @@ const Speakers = () => {
         <div className="w-full flex lg:flex-row flex-col items-center justify-center gap-8">
           {
             speakerLists.map(item => (
-              <Card data={item} />
+              <Card key={item.id} data={item} />
             ))
           }
         </div>
