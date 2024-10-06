@@ -9,7 +9,7 @@ import { StarsBackground } from "@/components/ui/stars-background";
 const sora = Sora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: " Coming Soon - PDD24",
+  title: " Palu Developer Day 2024",
   description: "PDD2024 by HammerCode",
 };
 
