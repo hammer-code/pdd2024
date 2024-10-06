@@ -8,7 +8,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #a0cbef, #cae3f1);
+  background: linear-gradient(to right, #39a1f7, #cae3f1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

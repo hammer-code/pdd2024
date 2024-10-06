@@ -1,17 +1,21 @@
 // all components
 import About from './components/about'
+import EventSubscription from './components/event-subscription/'
 import HeroSection from './components/hero-section'
 import SocialLinks from './components/hero-section/social-links'
+import Newsletter from './components/newsletter';
 import Speakers from './components/speakers'
 
 const Home = () => {
   return (
-    <div>
+    <>
       <HeroSection />
       <About />
       <Speakers />
+      <Newsletter />
+      {/* <EventSubscription /> */}
       <SocialLinks />
-    </div>
+    </>
   )
 }
 
