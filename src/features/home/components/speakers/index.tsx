@@ -4,7 +4,7 @@ import TitleSection from "./title-section";
 
 const Speakers = () => {
   return (
-    <div className="max-w-6xl mx-auto px-5 py-24">
+    <div id="speakers" className="max-w-6xl mx-auto px-5 py-24">
       <div className="space-y-6">
         <TitleSection />
         <div className="w-full flex lg:flex-row flex-col items-center justify-center gap-8">
