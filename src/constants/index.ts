@@ -9,7 +9,7 @@ export const navLists: NavList[] = [
   {
     id: 2,
     name: "Partners",
-    navigate_url: "#speakers",
+    navigate_url: "#partners",
   },
   {
     id: 3,
