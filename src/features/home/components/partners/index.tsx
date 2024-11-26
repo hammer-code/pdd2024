@@ -19,7 +19,6 @@ const Partners = () => {
                     </div>
                     <Image src="/assets/partners/media.png" alt="media" width="200" height="200" className="lg:w-[600px] w-[600px]" />
                 </div>
-
             </div>
         </div>
     )
