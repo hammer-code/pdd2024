@@ -15,10 +15,10 @@ const Home = () => {
       <About />
       <Speakers />
       <Newsletter />
+      <Rundown />
       <Partners />
       {/* <EventSubscription /> */}
       <SocialLinks />
-      <Rundown />
     </>
   )
 }

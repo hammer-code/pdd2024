@@ -9,4 +9,11 @@ export type SpeakerList = {
   name: string;
   role: string;
   img: string;
-}
+};
+
+export type RundownList = {
+  id: number;
+  title: string;
+  description: string;
+  timeline: string;
+};

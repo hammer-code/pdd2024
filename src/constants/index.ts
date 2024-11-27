@@ -1,4 +1,4 @@
-import { NavList, SpeakerList } from "@/types";
+import { NavList, RundownList, SpeakerList } from "@/types";
 
 export const navLists: NavList[] = [
   {
@@ -21,14 +21,35 @@ export const navLists: NavList[] = [
 export const speakerLists: SpeakerList[] = [
   {
     id: 1,
-    name: 'Rian Apriansyah',
-    role: 'Software Engineer at Unit4',
-    img: '/assets/images/rian.png'
+    name: "Rian Apriansyah",
+    role: "Software Engineer at Unit4",
+    img: "/assets/images/rian.png",
   },
   {
     id: 2,
-    name: 'Fendi Irfan Amorokhman',
-    role: 'Data Engineer at OY Indonesia',
-    img: '/assets/images/fandi.png'
-  }
-]
+    name: "Fendi Irfan Amorokhman",
+    role: "Data Engineer at OY Indonesia",
+    img: "/assets/images/fandi.png",
+  },
+];
+
+export const rundownLists: RundownList[] = [
+  {
+    id: 1,
+    title: "Title",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    timeline: "08:00 - 09:00",
+  },
+  {
+    id: 2,
+    title: "Title",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    timeline: "09:00 - 10:00",
+  },
+  {
+    id: 3,
+    title: "Title",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    timeline: "10:00 - 11:00",
+  },
+];
