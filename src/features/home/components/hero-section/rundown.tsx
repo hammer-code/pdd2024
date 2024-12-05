@@ -10,13 +10,16 @@ const Rundown = () => {
         <div className="flex flex-col gap-4 max-w-[38rem] w-full">
           {rundownLists.map((value, index) => (
             <div key={index} className="bg-primaryBlack-800 space-y-4 p-4">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-between gap-2">
                 <h2 className="text-lg text-sky-500 font-semibold">
                   {value.title}
                 </h2>{" "}
-                |<div className="text-sm">{value.timeline}</div>
+                <div className="text-md">{value.timeline}</div>
               </div>
-              <p className="text-sm">{value?.description}</p>
+              <div className="flex items-center justify-between gap-12">
+                <p className="text-sm">{value?.description}</p>
+                <p className="italic text-sm font-thin">Terlaksana</p>
+              </div>
             </div>
           ))}
         </div>
