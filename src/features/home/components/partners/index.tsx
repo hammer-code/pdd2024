@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Partners = () => {
     return (
-        <div className="my-12" id="partners">
+        <div className="my-12 bg-primaryBlack-800 bg-opacity-[0.4] py-16" id="partners">
             <div className="flex flex-col items-center gap-6">
                 <h2 className="md:text-5xl text-3xl font-bold">Our <span className="text-sky-500">Partners</span></h2>
             </div>
